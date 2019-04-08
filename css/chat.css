@@ -1,5 +1,5 @@
 .chats-body {
-  padding: 0;
+  padding: 10px 0px;
 }
 
 .chats-body .header,
@@ -8,17 +8,8 @@
 }
 
 .chat-screen {
-  background-image: url("../images/bg.png");
+  background-image: url("../images/chatBg.png");
   min-height: 100vh;
-}
-
-.chat-screen .chat__messages {
-  border-top: 1px solid #f7f7f7;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0px 20px;
-  padding-top: 30px;
 }
 
 .chat__write {
@@ -29,8 +20,8 @@
   left: 0;
   right: 0;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   background-color: #fcfcfc;
   padding: 0px 20px;
   border-radius: 40px;
@@ -57,6 +48,16 @@
   outline: none;
 }
 
+.chat-screen .chat__messages {
+  border-top: 1px solid #f7f7f7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+  padding-top: 30px;
+}
+
 .chat__messages .chat__timestamp {
   background-color: white;
   font-size: 12px;
@@ -72,12 +73,7 @@
 .message {
   display: flex;
   align-items: flex-start;
-  width: 50%;
   margin-bottom: 20px;
-}
-
-.message .message__content {
-  width: 80%;
 }
 
 .incoming-message {
@@ -96,15 +92,17 @@
 
 .message .message__bubble {
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 16px -8px,
-    rgba(0, 0, 0, 0.024) 0px -6px 16px -6px;
+  box-shadow: 0 30px 60px -12px rgba(50, 50, 93, 0.25),
+    0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025);
   padding: 10px 20px;
-  border-radius: 30px;
+  border-radius: 20px;
+  display: block;
+  color: white;
+  font-weight: 600;
 }
 
 .incoming-message .message__author {
   margin-top: 10px;
-  margin-bottom: 10px;
   display: block;
   font-weight: 600;
   font-size: 12px;
@@ -112,8 +110,10 @@
 
 .incoming-message .message__bubble {
   border-bottom-left-radius: 0px;
+  background-image: linear-gradient(to right, #7b4397, #dc2430);
 }
 
 .sent-message .message__bubble {
   border-bottom-right-radius: 0px;
+  background-image: linear-gradient(to left, #00c6ff, #0072ff);
 }
